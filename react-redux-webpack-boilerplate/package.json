@@ -1,0 +1,24 @@
+{
+  "name": "react-redux-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for react redux application with webpack production ready",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akhilesh-pilkhwal/react-redux-webpack-boilerplate.git"
+  },
+  "keywords": [
+    "Reactjs",
+    "redux",
+    "webpack"
+  ],
+  "author": "Akhilesh singh pilkhwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akhilesh-pilkhwal/react-redux-webpack-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Akhilesh-pilkhwal/react-redux-webpack-boilerplate#readme"
+}
