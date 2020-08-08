@@ -1,11 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  mode: 'development', 
+  mode: 'development',
   context: path.resolve(__dirname, 'src'),
   entry: {
     app: './index.js',
@@ -17,8 +17,9 @@ module.exports = {
     publicPath: '/'
   },
   devServer: {
-    contentBase: './dist',
-    port: "8080",
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 8080,
     historyApiFallback: true,
     publicPath: '/'
   },
@@ -26,9 +27,11 @@ module.exports = {
     usedExports: true,
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: ['dist']
+    }),
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: './public/index.html',
       inject: 'body',
       chunks: ['app']
     }),
@@ -74,7 +77,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components|webpack.dev.config.js)/,
+        exclude: /(node_modules|bower_components|webpack.config.js)/,
         use: {
           loader: 'babel-loader'
         }
