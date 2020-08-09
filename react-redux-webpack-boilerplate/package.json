@@ -7,7 +7,8 @@
     "test": "npm run test",
     "start": "webpack-dev-server --open",
     "build": "webpack",
-    "lint": "node_modules/.bin/eslint webpack.config.* src --fix"
+    "lint": "node_modules/.bin/eslint webpack.config.* src --fix",
+    "build:prod": "webpack --config webpack.config.prod.js -p"
   },
   "repository": {
     "type": "git",
@@ -38,15 +39,22 @@
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
+    "brotli-webpack-plugin": "^1.1.0",
     "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^4.0.0",
     "css-loader": "^4.2.1",
     "dotenv-webpack": "^2.0.0",
     "eslint-plugin-react": "^7.20.5",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "favicons-webpack-plugin": "^4.2.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.9.0",
     "path": "^0.12.7",
     "sass-loader": "^9.0.3",
+    "script-ext-html-webpack-plugin": "^2.1.4",
+    "sw-precache-webpack-plugin": "^1.0.0",
+    "terser-webpack-plugin": "^4.0.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
