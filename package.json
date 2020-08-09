@@ -8,7 +8,8 @@
     "start": "webpack-dev-server --open",
     "build": "webpack",
     "lint": "node_modules/.bin/eslint webpack.config.* src --fix",
-    "build:prod": "webpack --config webpack.config.prod.js -p"
+    "build:prod": "webpack --config webpack.config.prod.js -p",
+    "start:prod": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -45,7 +46,7 @@
     "css-loader": "^4.2.1",
     "dotenv-webpack": "^2.0.0",
     "eslint-plugin-react": "^7.20.5",
-    "extract-text-webpack-plugin": "^3.0.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "favicons-webpack-plugin": "^4.2.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
